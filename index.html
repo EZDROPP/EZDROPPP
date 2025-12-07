@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Base -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EZ DROPP — Premium Marketplace & Dropshipping (Official)</title>
+  <meta name="description" content="EZ DROPP is a modern, premium black/gray marketplace for buying, selling, and dropshipping products. Fast, secure, and SEO-optimized." />
+  <link rel="canonical" href="https://example.com/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#0e0f12" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="EZ DROPP — Premium Marketplace & Dropshipping" />
+  <meta property="og:description" content="Buy, sell, and dropship with a luxury dark UI. Fast, secure, and SEO-optimized." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EZ DROPP — Premium Marketplace & Dropshipping" />
+  <meta name="twitter:description" content="Luxury dark marketplace UI with fast performance and SEO." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop" />
+
+  <!-- Preload fonts (optional, replace URLs with your CDN) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Schema (Organization + WebSite + SearchAction) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"EZ DROPP",
+    "url":"https://example.com/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://example.com/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"EZ DROPP",
+    "url":"https://example.com/",
+    "logo":"https://example.com/logo.png",
+    "sameAs":[
+      "https://www.facebook.com/ezdropp",
+      "https://www.instagram.com/ezdropp"
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0e0f12; --bg-2:#121317; --bg-3:#1a1b21; --card:#15171d;
+      --text:#e7e7ea; --muted:#a9a9b0; --accent:#6c8cff; --accent-2:#28c76f;
+      --border:#2a2c34; --danger:#ff5d5d; --radius:16px; --shadow:0 12px 28px rgba(0,0,0,.35)
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 480px at 80% -10%, rgba(108,140,255,.12), transparent 60%),
+        radial-gradient(700px 400px at -10% 110%, rgba(40,199,111,.08), transparent 60%),
+        var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--accent);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:24px}
+    header{
+      position:sticky;top:0;z-index:40; backdrop-filter:saturate(160%) blur(8px);
+      background:linear-gradient(0deg, rgba(20,22,27,.85), rgba(20,22,27,.65));
+      border-bottom:1px solid var(--border)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.4px}
+    .logo{width:42px;height:42px;border-radius:12px;position:relative;overflow:hidden;background:linear-gradient(180deg,#0e0f12,#23252e)}
+    .logo::after{content:"";position:absolute;inset:6px;border-radius:10px;background:radial-gradient(140px 80px at 30% 30%, #6c8cff55, transparent 60%)}
+    .nav-actions{display:flex;align-items:center;gap:10px}
+    .btn{appearance:none;border:1px solid var(--border); background:linear-gradient(180deg, var(--bg-3), var(--card));
+      color:var(--text); padding:10px 14px; border-radius:12px; cursor:pointer; transition:.2s transform,.2s box-shadow,.2s border-color}
+    .btn:hover{transform:translateY(-1px); box-shadow:0 8px 20px rgba(0,0,0,.35)}
+    .btn.accent{background:linear-gradient(180deg,#6c8cff,#4c6bff);color:#0e1025;border-color:#5a73ff}
+    .btn.success{background:linear-gradient(180deg,#28c76f,#1ea65a);color:#06130d;border-color:#1b9c53}
+    .btn.danger{background:linear-gradient(180deg,#ff5d5d,#e64b4b);color:#1a0d0d;border-color:#d44141}
+    .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:linear-gradient(180deg,var(--bg-2),var(--card))}
+    .card{background:linear-gradient(180deg,var(--card),var(--bg-3));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .card-header{padding:16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+    .card-body{padding:16px}
+    .card-footer{padding:12px 16px;border-top:1px solid var(--border);display:flex;gap:10px;flex-wrap:wrap}
+    .grid{display:grid;gap:18px}
+    @media(min-width:800px){ .grid.cols-2{grid-template-columns:repeat(2,1fr)} }
+    @media(min-width:950px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+    .hero{display:grid;gap:20px;align-items:center;padding:24px}
+    @media(min-width:900px){ .hero{grid-template-columns:1.1fr .9fr} }
+    .hero h1{margin:0;font-size:clamp(28px,4vw,42px)}
+    .sub{color:var(--muted)}
+    .pill{border:1px solid var(--border);border-radius:999px;padding:6px 10px;color:var(--muted);display:inline-block}
+    .muted{color:var(--muted)}
+    .input, select, textarea{
+      width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);
+      background:linear-gradient(180deg,var(--bg-2),var(--card)); color:var(--text); outline:none; transition:.2s border-color,.2s box-shadow
+    }
+    .input::placeholder{color:#8b8d96}
+    .input:focus, select:focus, textarea:focus{border-color:#3a3d47;box-shadow:0 0 0 4px rgba(108,140,255,.15)}
+    .product{display:flex;flex-direction:column;gap:12px}
+    .product img{border-radius:12px;border:1px solid var(--border); background:linear-gradient(180deg,#0d0e12,#161720)}
+    .price{font-weight:700}
+    .spaced{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(180deg,#23252e,#171821);border:1px solid var(--border)}
+    footer{margin-top:40px;padding:24px;border-top:1px solid var(--border);color:var(--muted);background:linear-gradient(180deg,var(--bg-2),var(--bg-3))}
+    .table{width:100%;border-collapse:collapse;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+    .table th,.table td{padding:12px;border-bottom:1px solid var(--border);text-align:left}
+    .toast{position:fixed;right:18px;bottom:18px;z-index:50;background:linear-gradient(180deg,#1b1d25,#14151b);border:1px solid var(--border);color:var(--text);padding:12px 14px;border-radius:12px;box-shadow:var(--shadow)}
+    .hidden{display:none !important}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap}
+    .tab{padding:8px 12px;border:1px solid var(--border);border-radius:10px;background:linear-gradient(180deg,var(--bg-2),var(--card));cursor:pointer;color:var(--muted)}
+    .tab.active{color:var(--text);border-color:#3a3d47}
+    .section-title{font-weight:700;margin:16px 0 8px}
+    /* Accessibility focus */
+    :focus-visible{outline:2px solid #6c8cff; outline-offset:2px}
+  </style>
+</head>
+<body>
+  <a href="#main" class="badge" style="position:absolute;left:-9999px;top:-9999px">Skip to content</a>
+
+  <header role="banner">
+    <div class="nav" aria-label="Primary">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div aria-label="Site name">EZ DROPP</div>
+          <div class="muted" style="font-size:12px">Marketplace • Dropship • Black/Gray UI</div>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button class="btn" id="toggleTheme" aria-pressed="false">Theme</button>
+        <button class="btn" id="viewCartBtn" aria-controls="cartSection">Cart</button>
+        <button class="btn" id="ordersBtn" aria-controls="ordersSection">Orders</button>
+        <button class="btn accent" id="loginBtn" aria-haspopup="dialog">Login</button>
+        <button class="btn danger hidden" id="logoutBtn">Logout</button>
+        <span class="badge" id="userBadge" aria-label="Current user">Guest</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- Hero -->
+    <section class="hero card" aria-label="Hero">
+      <div class="card-body">
+        <h1>EZ DROPP — Advanced marketplace, your way</h1>
+        <p class="sub">Post listings, accept orders, manage cart & checkout. Designed for a modern black/gray brand.</p>
+        <div class="grid cols-2" style="margin-top:10px">
+          <div>
+            <input class="input" id="searchInput" placeholder="Search products, categories, or sellers…" aria-label="Search" />
+          </div>
+          <div class="spaced">
+            <select class="input" id="filterCategory" aria-label="Filter by category">
+              <option value="">All categories</option>
+              <option>Fashion</option>
+              <option>Electronics</option>
+              <option>Home</option>
+            </select>
+            <button class="btn accent" id="searchBtn">Search</button>
+          </div>
+        </div>
+        <div class="spaced" style="margin-top:10px">
+          <span class="pill">Secure checkout (demo)</span>
+          <span class="pill">Seller dashboard</span>
+          <span class="pill">Dark luxury UI</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="grid cols-2">
+          <div class="card" aria-label="Quick stats">
+            <div class="card-header"><strong>Quick stats</strong><span class="muted">Live</span></div>
+            <div class="card-body grid cols-2">
+              <div class="card"><div class="card-body"><span class="muted">Users</span><span id="kpiUsers" class="price">1</span></div></div>
+              <div class="card"><div class="card-body"><span class="muted">Listings</span><span id="kpiListings" class="price">3</span></div></div>
+              <div class="card"><div class="card-body"><span class="muted">In cart</span><span id="kpiCart" class="price">0</span></div></div>
+              <div class="card"><div class="card-body"><span class="muted">Orders</span><span id="kpiOrders" class="price">0</span></div></div>
+            </div>
+          </div>
+          <div class="card" aria-label="Seller tools">
+            <div class="card-header"><strong>Seller tools</strong><span class="muted">Post listing</span></div>
+            <div class="card-body">
+              <form id="sellForm" class="grid" style="gap:12px" aria-label="Sell form">
+                <input class="input" id="sellTitle" placeholder="Title (e.g., Premium Hoodie)" required />
+                <textarea class="input" id="sellDesc" placeholder="Short description" required></textarea>
+                <div class="grid cols-2">
+                  <input class="input" id="sellPrice" type="number" min="0" step="0.01" placeholder="Price" required />
+                  <input class="input" id="sellImage" type="url" placeholder="Image URL (https://…)" required />
+                </div>
+                <select id="sellCategory" class="input">
+                  <option>Fashion</option>
+                  <option>Electronics</option>
+                  <option>Home</option>
+                </select>
+                <button class="btn success" type="submit">Publish listing</button>
+              </form>
+              <p class="muted" style="margin-top:8px">Client‑side save for demo. Connect API for production (payments, auth, DB).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured products -->
+    <section class="card" style="margin-top:24px" aria-label="Featured products">
+      <div class="card-header spaced">
+        <strong>Featured products</strong>
+        <div class="spaced" style="gap:8px">
+          <span class="pill" id="productCount">3 items</span>
+          <select class="input" id="sortSelect" style="max-width:200px" aria-label="Sort">
+            <option value="relevance">Sort: Relevance</option>
+            <option value="price_asc">Sort: Price ↑</option>
+            <option value="price_desc">Sort: Price ↓</option>
+            <option value="title_asc">Sort: Title A–Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="productGrid" class="grid cols-3"></div>
+      </div>
+    </section>
+
+    <!-- Static sections -->
+    <section class="card" style="margin-top:24px" aria-label="About">
+      <div class="card-header"><strong>About EZ DROPP</strong><span class="muted">Our promise</span></div>
+      <div class="card-body">
+        <p>We craft a premium marketplace experience with a minimal black/gray aesthetic, fast performance, and clean UX. Whether you sell fashion, electronics, or home goods, EZ DROPP keeps it simple and powerful.</p>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:24px" aria-label="Contact">
+      <div class="card-header"><strong>Contact</strong><span class="muted">Get in touch</span></div>
+      <div class="card-body grid cols-2">
+        <div>
+          <p><strong>Email:</strong> hello@ezdropp.com</p>
+          <p><strong>Instagram:</strong> @ezdropp</p>
+          <p class="muted">For partnerships and dropshipping inquiries, reach out anytime.</p>
+        </div>
+        <form id="contactForm" class="grid" style="gap:10px" aria-label="Contact form">
+          <input class="input" id="cName" placeholder="Your name" required />
+          <input class="input" id="cEmail" type="email" placeholder="Your email" required />
+          <textarea class="input" id="cMsg" placeholder="Message" required></textarea>
+          <button class="btn accent" type="submit">Send</button>
+          <p class="muted" style="margin:0">Demo only. Connect email service to send.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Cart -->
+    <section id="cartSection" class="card hidden" style="margin-top:24px" aria-label="Cart">
+      <div class="card-header"><strong>Your cart</strong><span class="muted">Review & checkout</span></div>
+      <div class="card-body">
+        <table class="table" id="cartTable">
+          <thead><tr><th>Item</th><th>Price</th><th>Qty</th><th>Total</th><th>Action</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="card-footer spaced">
+        <div class="muted">Subtotal: <span id="cartSubtotal" class="price">$0.00</span></div>
+        <div class="spaced">
+          <button class="btn" id="clearCart">Clear</button>
+          <button class="btn accent" id="checkoutBtn">Checkout</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Orders -->
+    <section id="ordersSection" class="card hidden" style="margin-top:24px" aria-label="Orders">
+      <div class="card-header"><strong>Your orders</strong><span class="muted">History</span></div>
+      <div class="card-body">
+        <table class="table" id="ordersTable">
+          <thead><tr><th>Order #</th><th>Items</th><th>Total</th><th>Status</th><th>Date</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container" role="contentinfo">
+    <div class="spaced">
+      <div class="spaced">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <strong>EZ DROPP</strong><br />
+          <span class="muted">Owned by Abdullah — Luxury dark marketplace</span>
+        </div>
+      </div>
+      <div class="spaced">
+        <a class="pill" href="#" aria-label="Terms">Terms</a>
+        <a class="pill" href="#" aria-label="Privacy">Privacy</a>
+        <a class="pill" href="#" aria-label="Support">Support</a>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:8px">Client‑only demo. Connect a backend (auth, payments, DB) for production.</p>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script>
+    // Data
+    const DEMO_PRODUCTS = [
+      { id:"p-hoodie-01", title:"EZ Signature Hoodie", desc:"Luxury black/gray hoodie with minimalist embroidery.", price:59.00, image:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop", category:"Fashion" },
+      { id:"p-headphones-01", title:"Nebula ANC Headphones", desc:"Deep bass, matte finish, advanced noise cancelling.", price:129.00, image:"https://images.unsplash.com/photo-1518443893-6f6a8f1b83f2?q=80&w=1200&auto=format&fit=crop", category:"Electronics" },
+      { id:"p-lamp-01", title:"MonoGlow Desk Lamp", desc:"Adjustable LED, soft gray tone, perfect for late hustles.", price:39.00, image:"https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop", category:"Home" }
+    ];
+    const store = {
+      get key(){ return "ezdropp-prod"; },
+      get data(){
+        const raw = localStorage.getItem(this.key);
+        return raw ? JSON.parse(raw) : { user:null, cart:[], listings:[...DEMO_PRODUCTS], orders:[] };
+      },
+      set data(v){ localStorage.setItem(this.key, JSON.stringify(v)); }
+    };
+
+    // Utils
+    const $ = s => document.querySelector(s);
+    const $$ = s => Array.from(document.querySelectorAll(s));
+    const money = n => `$${Number(n).toFixed(2)}`;
+    function toast(msg,type="info"){
+      const t = $("#toast"); t.textContent = msg; t.classList.remove("hidden");
+      t.style.borderColor = type==="success" ? "#1b9c53" : type==="error" ? "#d44141" : "var(--border)";
+      setTimeout(()=>t.classList.add("hidden"), 2400);
+    }
+
+    // Render products
+    function renderProducts(){
+      const grid = $("#productGrid"); grid.innerHTML = "";
+      const q = $("#searchInput").value.toLowerCase().trim();
+      const cat = $("#filterCategory").value.toLowerCase();
+      const items = store.data.listings.filter(p=>{
+        const hit = p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q);
+        const catOk = !cat || p.category.toLowerCase()===cat;
+        return hit && catOk;
+      });
+      $("#productCount").textContent = `${items.length} item${items.length!==1?"s":""}`;
+      items.forEach(p=>{
+        const card = document.createElement("div");
+        card.className = "card product";
+        card.innerHTML = `
+          <div class="card-body">
+            <img src="${p.image}" alt="${p.title}" loading="lazy" />
+            <div class="spaced">
+              <div>
+                <strong>${p.title}</strong>
+                <div class="muted">${p.desc}</div>
+                <div style="margin-top:8px"><span class="pill">${p.category}</span></div>
+              </div>
+              <div class="price">${money(p.price)}</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn accent" data-id="${p.id}" data-action="add">Add to cart</button>
+            <button class="btn success" data-id="${p.id}" data-action="buy">Buy now</button>
+            <button class="btn" data-id="${p.id}" data-action="save">Save</button>
+            <button class="btn" data-id="${p.id}" data-action="share">Share</button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Cart
+    function renderCart(){
+      const tbody = $("#cartTable tbody"); tbody.innerHTML = "";
+      const data = store.data; let subtotal = 0;
+      data.cart.forEach((line,i)=>{
+        const total = line.price * line.qty; subtotal += total;
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${line.title}</td>
+          <td>${money(line.price)}</td>
+          <td>
+            <div style="display:flex;gap:6px;align-items:center">
+              <button class="btn" data-idx="${i}" data-action="dec">-</button>
+              <span style="min-width:24px;text-align:center">${line.qty}</span>
+              <button class="btn" data-idx="${i}" data-action="inc">+</button>
+            </div>
+          </td>
+          <td>${money(total)}</td>
+          <td><button class="btn danger" data-idx="${i}" data-action="remove">Remove</button></td>
+        `;
+        tbody.appendChild(tr);
+      });
+      $("#cartSubtotal").textContent = money(subtotal);
+      $("#kpiCart").textContent = data.cart.reduce((a,c)=>a+c.qty,0);
+    }
+
+    // Orders
+    function renderOrders(){
+      const tbody = $("#ordersTable tbody"); tbody.innerHTML = "";
+      const { orders } = store.data;
+      orders.forEach(o=>{
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>#${o.id}</td>
+          <td>${o.items.map(i=>`${i.title} × ${i.qty}`).join(", ")}</td>
+          <td>${money(o.total)}</td>
+          <td><span class="pill">Paid</span></td>
+          <td>${new Date(o.date).toLocaleString()}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+      $("#kpiOrders").textContent = orders.length;
+    }
+
+    // KPIs
+    function renderKPIs(){
+      const d = store.data;
+      $("#kpiUsers").textContent = d.user ? 1 : 1;
+      $("#kpiListings").textContent = d.listings.length;
+      $("#kpiCart").textContent = d.cart.reduce((a,c)=>a+c.qty,0);
+    }
+
+    // Auth (simple demo)
+    function openLogin(){ alert("Demo login — connect real auth in production."); }
+    function logout(){
+      const d = store.data; d.user = null; store.data = d;
+      $("#userBadge").textContent = "Guest"; $("#logoutBtn").classList.add("hidden"); $("#loginBtn").classList.remove("hidden");
+      toast("Logged out");
+    }
+
+    // Product actions
+    $("#productGrid").addEventListener("click", e=>{
+      const btn = e.target.closest("button"); if(!btn) return;
+      const id = btn.dataset.id, action = btn.dataset.action;
+      const d = store.data; const p = d.listings.find(x=>x.id===id); if(!p) return;
+      if(action==="add"){
+        const line = d.cart.find(l=>l.id===id);
+        if(line) line.qty += 1; else d.cart.push({ id, title:p.title, price:p.price, qty:1 });
+        store.data = d; renderCart(); renderKPIs(); $("#cartSection").classList.remove("hidden"); toast("Added to cart","success");
+      }
+      if(action==="buy"){
+        const order = { id: Math.floor(100000 + Math.random()*899999), items:[{ title:p.title, qty:1, price:p.price }], total:p.price, date:new Date().toISOString() };
+        d.orders.unshift(order); store.data = d; renderOrders(); renderKPIs(); $("#ordersSection").classList.remove("hidden"); toast("Order placed (demo)","success");
+      }
+      if(action==="save"){ toast("Saved"); }
+      if(action==="share"){ navigator.clipboard?.writeText(location.href).then(()=>toast("Link copied")).catch(()=>toast("Copy failed","error")); }
+    });
+
+    // Cart actions
+    $("#cartTable").addEventListener("click", e=>{
+      const btn = e.target.closest("button"); if(!btn) return;
+      const idx = parseInt(btn.dataset.idx), action = btn.dataset.action;
+      const d = store.data, line = d.cart[idx]; if(!line) return;
+      if(action==="inc"){ line.qty += 1; }
+      if(action==="dec"){ line.qty = Math.max(1, line.qty - 1); }
+      if(action==="remove"){ d.cart.splice(idx,1); }
+      store.data = d; renderCart(); renderKPIs();
+    });
+    $("#clearCart").addEventListener("click", ()=>{
+      const d = store.data; d.cart = []; store.data = d; renderCart(); renderKPIs(); toast("Cart cleared");
+    });
+    $("#checkoutBtn").addEventListener("click", ()=>{
+      const d = store.data;
+      if(d.cart.length===0){ toast("Cart is empty","error"); return; }
+      const total = d.cart.reduce((s,l)=>s+l.price*l.qty,0);
+      const order = { id: Math.floor(100000 + Math.random()*899999), items:[...d.cart], total, date:new Date().toISOString() };
+      d.orders.unshift(order); d.cart = []; store.data = d;
+      renderOrders(); renderCart(); renderKPIs(); $("#ordersSection").classList.remove("hidden"); toast("Checkout complete (demo)","success");
+    });
+
+    // Contact form demo
+    $("#contactForm").addEventListener("submit", e=>{
+      e.preventDefault();
+      toast("Message captured (demo). Connect email service.","success");
+      e.target.reset();
+    });
+
+    // Header buttons
+    $("#viewCartBtn").addEventListener("click", ()=>{ $("#cartSection").classList.toggle("hidden"); });
+    $("#ordersBtn").addEventListener("click", ()=>{ $("#ordersSection").classList.toggle("hidden"); });
+    $("#loginBtn").addEventListener("click", openLogin);
+    $("#logoutBtn").addEventListener("click", logout);
+    $("#toggleTheme").addEventListener("click", ()=>{
+      const alt = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() !== "#ff8c6c";
+      document.documentElement.style.setProperty("--accent", alt ? "#ff8c6c" : "#6c8cff");
+      document.documentElement.style.setProperty("--accent-2", alt ? "#00d1b2" : "#28c76f");
+      toast("Theme updated");
+    });
+    $("#searchBtn").addEventListener("click", ()=>{ renderProducts(); });
+
+    // Init
+    (function init(){
+      renderProducts(); renderCart(); renderOrders(); renderKPIs();
+      const d = store.data;
+      if(d.user){ $("#userBadge").textContent = d.user.name || "User"; $("#logoutBtn").classList.remove("hidden"); $("#loginBtn").classList.add("hidden"); }
+    })();
+  </script>
+</body>
+</html>
